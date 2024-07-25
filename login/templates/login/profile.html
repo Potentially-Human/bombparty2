@@ -1,0 +1,14 @@
+{% extends 'login/layout.html' %}
+
+{% block content %}
+    {% if user.username %}
+        {{ user.username }}
+    {% endif %}
+
+    {% if user.userprofile.profile_picture %}
+        <img src="{{ user.userprofile.profile_picture.url }}" alt="profile picture">
+    {% else %}
+        <img src="/media/default.png" alt="profile picture">
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "login/layout.html" %}
+
+{% block content %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ update_user_form }}
+        <a href="{% url 'changepassword' %}">Change Password</a>
+        {{ update_profile_form }}
+        <button type="submit">Apply</button>
+        <button type="reset">Reset</button>
+    </form>
+
+{% endblock %}
+
+{% block errors %}
+    
+    {% if edit_user_form.errors %}
+        <ul>
+            {% for key, value in edit_user_form.errors.items %}
+                <li>{{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "login/layout.html" %}
+
+{% block content %}
+
+    <form action="{% url 'createaccount' %}" method="post" autocomplete="off">
+        {% csrf_token %}
+        {{ createuserform.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <a href="{% url 'login' %}">Already have an account?</a>
+
+{% endblock %}
+
+
+{% block errors %}
+
+    {% if errordict %}
+        {% for field, errs in errordict.items %}
+            {% if field %}
+                {{ field }} error: 
+            {% endif %}
+            {% for err in errs %}
+                {{ err }}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

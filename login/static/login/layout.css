@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Mono";
+    src: url("/static/game/assets/MonoBold.ttf");
+    font-weight: 800;  
+}
+
+@font-face {
+    font-family: "Mono";
+    src: url("/static/game/assets/MonoLight.ttf");
+    font-weight: 200; 
+}
+
+@font-face {
+    font-family: "Mono";
+    src: url("/static/game/assets/MonoRegular.ttf");
+    font-weight: 400; 
+}
+
+.helptext {
+    display: none; 
+}
+
+html {
+    height: 100%; 
+    margin: 0px; 
+    padding: 0px; 
+}
+
+body {
+    background-color: #191919;
+    color: #d7d7d7;
+    font-family: "Mono";
+    text-align: center;
+    margin: 0px;
+    height: 100%;  
+}
+
+#content-wrapper {
+    align-content: center;
+    min-height: 100%;  
+}
+
+#content {
+    padding: 10px; 
+    border-radius: 20px; 
+    background-color: #282828;
+    border: 1px solid #b1b1b1;
+    min-width: 300px; 
+    max-width: 600px; 
+    margin: auto;
+}
+
+p {
+    margin: 0px; 
+}
+
+input, input::placeholder {
+    font-family: "Mono";
+}
+
